@@ -79,7 +79,7 @@ inline void printboard()
 	{
 		for(int j=1;j<=m;j++)
 		{
-			if(board[i][j]==-1){printf("# ");continue;}
+			//if(board[i][j]==-1){printf("# ");continue;}
 			if(board[i][j]<=8)
 				printf(" ");
 			else if(board[i][j]>=19)
@@ -155,6 +155,7 @@ inline void play(int movetype)
 	while(!gameover())
 	{
 		system("cls");
+		if(!flag)printf("***New Game***");
 		printboard();
 		int type,x,y;
 		getmove(movetype,type,x,y);
@@ -192,4 +193,3 @@ int main()
 	
 	return 0;
 }
-
